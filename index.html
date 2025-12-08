@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepak Paryani | Software Engineer</title>
+    <meta name="description" content="Deepak Paryani - 12+ years building scalable systems, GenAI orchestration, and high-performance APIs">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- Animated Background -->
+    <canvas class="particle-bg" id="particle-canvas"></canvas>
+    
+    <!-- Floating Open to Opportunities Badge -->
+    <div class="fixed top-24 right-8 z-50 floating-badge">
+        <div class="glass-card px-6 py-3 rounded-full neon-border pulse-glow">
+            <div class="flex items-center space-x-2">
+                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                <span class="text-sm font-semibold text-green-400">Open to Opportunities</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-card border-b border-white/10">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-3xl font-display font-bold gradient-text glow-text">
+                    DP
+                </div>
+                <div class="hidden md:flex space-x-10">
+                    <a href="#home" class="nav-link text-gray-300 hover:text-white transition">Home</a>
+                    <a href="#about" class="nav-link text-gray-300 hover:text-white transition">About</a>
+                    <a href="#experience" class="nav-link text-gray-300 hover:text-white transition">Journey</a>
+                    <a href="#skills" class="nav-link text-gray-300 hover:text-white transition">Skills</a>
+                    <a href="#projects" class="nav-link text-gray-300 hover:text-white transition">Projects</a>
+                    <a href="#contact" class="nav-link text-gray-300 hover:text-white transition">Connect</a>
+                </div>
+                <!-- <button id="theme-toggle" class="p-3 rounded-full glass-card hover:scale-110 transition">
+                    <i class="fas fa-moon text-white"></i>
+                </button> -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative px-6 pt-20">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="floating">
+                    <h1 class="text-6xl md:text-8xl font-display font-bold mb-6">
+                        Hi, I'm <span class="gradient-text glow-text">Deepak</span>
+                    </h1>
+                    <h2 class="text-3xl md:text-4xl text-gray-400 mb-6 font-light">
+                        Software Engineer
+                    </h2>
+                    <p class="text-lg text-gray-300 mb-8 max-w-lg">
+                        12+ years building <span class="text-cyan-400 font-semibold">scalable APIs</span>, 
+                        orchestrating <span class="text-purple-400 font-semibold">GenAI flows</span>, and 
+                        solving complex technical challenges.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-12">
+                        <button class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full font-semibold hover:scale-105 transition transform shadow-lg hover:shadow-cyan-500/25">
+                            View My Work <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                        <a href="https://github.com/deepakparyani" target="_blank" class="px-8 py-4 glass-card rounded-full hover:scale-105 transition transform text-white">
+                            <i class="fab fa-github mr-2"></i> GitHub
+                        </a>
+                    </div>
+                    <div class="scroll-indicator text-cyan-400">
+                        <i class="fas fa-chevron-down text-2xl"></i>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative floating" style="animation-delay: -3s;">
+                        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full blur-3xl opacity-30"></div>
+                        <img id="profile-img" 
+                             src="assets/images/profile.jpg" 
+                             alt="Deepak Paryani"
+                             class="relative w-80 h-80 rounded-full object-cover border-4 border-white/10 shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-5xl font-display font-bold text-center mb-4 gradient-text glow-text">About Me</h2>
+            <p class="text-center text-gray-400 mb-16 max-w-2xl mx-auto">
+                Engineer by day, innovator by night, proud father always
+            </p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 glass-card p-8 rounded-2xl neon-border">
+                    <p class="text-lg text-gray-300 mb-6">
+                        I'm a seasoned software engineer with <span class="text-cyan-400 font-semibold">12+ years</span> 
+                        of experience spanning Python Ecosystem,Java enterprise systems to cutting-edge GenAI applications. My superpower? 
+                        Turning complex business problems into elegant, scalable solutions.
+                    </p>
+                    <p class="text-lg text-gray-300 mb-6">
+                        At <span class="text-purple-400 font-semibold">Enlyft Inc</span>, I lead backend initiatives that 
+                        have boosted API performance by ~200% and orchestrated GenAI flows that empower sales teams with 
+                        intelligent insights.
+                    </p>
+                    <p class="text-lg text-gray-300 mb-6">
+                        When I'm not optimizing systems or experimenting with LLMs, you'll find me building drones, 
+                        tracking patents, or being a proud <span class="text-red-400 font-bold">Boy Dad</span>.
+                    </p>
+                    <div class="bg-purple-500/10 p-4 rounded-lg border border-purple-500/20">
+                        <p class="text-purple-400 text-sm">
+                            <i class="fas fa-lightbulb mr-2"></i>
+                            Innovation-driven engineer with a patent in facial recognition systems and passion for emerging tech
+                        </p>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="glass-card p-6 rounded-xl neon-border tilt-card">
+                        <h3 class="text-3xl font-bold text-cyan-400 mb-2">12+</h3>
+                        <p class="text-gray-400">Years Experience</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl neon-border tilt-card">
+                        <h3 class="text-3xl font-bold text-purple-400 mb-2">200%</h3>
+                        <p class="text-gray-400">API Performance Boost</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl neon-border tilt-card">
+                        <h3 class="text-3xl font-bold text-green-400 mb-2">1</h3>
+                        <p class="text-gray-400">Patent Awarded</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl neon-border tilt-card">
+                        <h3 class="text-3xl font-bold text-red-400 mb-2">👶</h3>
+                        <p class="text-gray-400">Proud Boy Dad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-32 px-6 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-5xl font-display font-bold text-center mb-4 gradient-text glow-text">Tech Arsenal</h2>
+            <p class="text-center text-gray-400 mb-16">Tools & technologies I wield to build magic</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Python -->
+                <div class="glass-card p-6 rounded-xl neon-border tilt-card group">
+                    <div class="text-5xl mb-4 bg-gradient-to-r from-cyan-500 to-purple-600 bg-clip-text text-transparent">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Python Ecosystem</h3>
+                    <p class="text-gray-400 mb-4 text-sm">FastAPI, Flask, AsyncIO, Airflow, Data Engineering</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">FastAPI</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">AsyncIO</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Celery</span>
+                    </div>
+                </div>
+
+                <!-- Java (ADDED) -->
+                <div class="glass-card p-6 rounded-xl neon-border tilt-card group">
+                    <div class="text-5xl mb-4 bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Java Enterprise</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Spring, Hibernate, Relational DBs</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Spring</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Hibernate</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">PostgreSQL</span>
+                    </div>
+                </div>
+
+                <!-- GenAI -->
+                <div class="glass-card p-6 rounded-xl neon-border tilt-card group">
+                    <div class="text-5xl mb-4 bg-gradient-to-r from-purple-500 to-pink-600 bg-clip-text text-transparent">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">GenAI Stack</h3>
+                    <p class="text-gray-400 mb-4 text-sm">LLMs, LangGraph, MCP</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">OpenAI</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">LangGraph</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">MCP</span>
+                    </div>
+                </div>
+
+                <!-- Data Layer -->
+                <div class="glass-card p-6 rounded-xl neon-border tilt-card group">
+                    <div class="text-5xl mb-4 bg-gradient-to-r from-green-500 to-cyan-600 bg-clip-text text-transparent">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Data Layer</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Redis, PostgreSQL, InfluxDB</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Redis</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">InfluxDB</span>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps -->
+                <div class="glass-card p-6 rounded-xl neon-border tilt-card group">
+                    <div class="text-5xl mb-4 bg-gradient-to-r from-yellow-500 to-red-600 bg-clip-text text-transparent">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Cloud & DevOps</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Azure, Docker, DataDog, CI/CD</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Azure</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Docker</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">DataDog</span>
+                    </div>
+                </div>
+
+                <!-- CRM Integration -->
+                <div class="glass-card p-6 rounded-xl neon-border tilt-card group">
+                    <div class="text-5xl mb-4 bg-gradient-to-r from-pink-500 to-yellow-600 bg-clip-text text-transparent">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">CRM Integration</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Salesforce, HubSpot, Dynamics, Marketo, Outreach, Pipedrive</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Salesforce</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">HubSpot</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Dynamics</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Pipedrive</span>
+                    </div>
+                </div>
+
+                <!-- Tooling -->
+                <div class="glass-card p-6 rounded-xl neon-border tilt-card group">
+                    <div class="text-5xl mb-4 bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Tooling</h3>
+                    <p class="text-gray-400 mb-4 text-sm">React, Airflow, Celery, Git, Agile</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">React</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Airflow</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Celery</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Git</span>
+                    </div>
+                </div>
+
+                <!-- System Design -->
+                <div class="glass-card p-6 rounded-xl neon-border tilt-card group">
+                    <div class="text-5xl mb-4 bg-gradient-to-r from-teal-500 to-blue-600 bg-clip-text text-transparent">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">System Design</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Microservices, Architecture, Scalability, Performance</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Microservices</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">API Design</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Load Testing</span>
+                    </div>
+                </div>
+
+                <!-- Performance & Observability -->
+                <div class="glass-card p-6 rounded-xl neon-border tilt-card group">
+                    <div class="text-5xl mb-4 bg-gradient-to-r from-red-500 to-orange-600 bg-clip-text text-transparent">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Performance</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Query Optimization, Caching, Observability, Tuning</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Query Optimization</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Caching</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">DataDog</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-32 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-5xl font-display font-bold text-center mb-4 gradient-text glow-text">Journey</h2>
+            <p class="text-center text-gray-400 mb-16">From gamified hiring to GenAI orchestration</p>
+            <div class="relative">
+                <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-cyan-500 to-purple-600"></div>
+                
+                <!-- Enlyft (Current) -->
+                <div class="relative mb-16 fade-in">
+                    <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 timeline-dot rounded-full border-4 border-black"></div>
+                    <div class="ml-20 md:ml-0 md:w-1/2 md:pr-12">
+                        <div class="glass-card p-8 rounded-xl neon-border tilt-card">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-display font-semibold text-white">Senior Software Engineer</h3>
+                                <span class="text-xs bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full">2023 - Present</span>
+                            </div>
+                            <p class="text-purple-400 text-lg mb-4 font-medium">Enlyft Inc.</p>
+                            <p class="text-gray-300 mb-6">
+                                Leading GenAI orchestration and API performance initiatives. Built MCP layer extracting 
+                                B2B sales intelligence and scaled APIs by ~200%.
+                            </p>
+                            <!-- Microsoft Collaboration Highlight -->
+                            <div class="bg-gradient-to-r from-blue-500/20 to-purple-500/20 p-4 rounded-lg border border-blue-500/30 mb-4">
+                                <p class="text-blue-300 text-sm font-semibold mb-2">
+                                    <i class="fab fa-microsoft mr-2"></i>Microsoft Collab
+                                </p>
+                                <p class="text-gray-200 text-sm">
+                                    Collaborated with Microsoft to create and provide Sales insights for their 
+                                    SalesQualificationAgent via MCP server, API bridge and Copilot Agents
+                                </p>
+                            </div>
+                            <ul class="text-gray-400 text-sm space-y-2 mb-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-cyan-500 mt-1 mr-3"></i>
+                                    Scaled Public APIs ~200% more performant (few seconds → <500ms)
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-cyan-500 mt-1 mr-3"></i>
+                                    Created MCP layer to extract B2B Sales and proprietary info
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-cyan-500 mt-1 mr-3"></i>
+                                    Expertise in CRM APIs, high-volume data syncs, concurrency solutions
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Python</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">OpenAI</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">MCP</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Azure</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Redis</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- eQ Technologic -->
+                <div class="relative mb-16 fade-in">
+                    <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 timeline-dot rounded-full border-4 border-black"></div>
+                    <div class="ml-20 md:ml-0 md:w-1/2 md:pl-12 md:ml-auto">
+                        <div class="glass-card p-8 rounded-xl neon-border tilt-card">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-display font-semibold text-white">Principal Software Engineer</h3>
+                                <span class="text-xs bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full">2013 - 2023</span>
+                            </div>
+                            <p class="text-purple-400 text-lg mb-4 font-medium">eQ Technologic Inc.</p>
+                            <p class="text-gray-300 mb-6">
+                                Full-stack development in Java enterprise ecosystem. Led complete module delivery 
+                                from requirements to production with Siemens integrations.
+                            </p>
+                            <ul class="text-gray-400 text-sm space-y-2 mb-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-purple-500 mt-1 mr-3"></i>
+                                    Complete Java enterprise ecosystem - Spring, Auth, REST, compliance
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-purple-500 mt-1 mr-3"></i>
+                                    Business Intelligence tools integration with Siemens Products
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-purple-500 mt-1 mr-3"></i>
+                                    Led teams with code reviews, optimizations, and cross-team coordination
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Java</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Spring</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">React</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Agile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HuntsHire (Startup Experience) -->
+                <div class="relative mb-16 fade-in">
+                    <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 timeline-dot rounded-full border-4 border-black"></div>
+                    <div class="ml-20 md:ml-0 md:w-1/2 md:pr-12">
+                        <div class="glass-card p-8 rounded-xl neon-border tilt-card">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-display font-semibold text-white">Startup Engineer</h3>
+                                <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full">2012 - 2013</span>
+                            </div>
+                            <p class="text-purple-400 text-lg mb-4 font-medium">HuntsHire</p>
+                            <p class="text-gray-300 mb-6">
+                                Early-stage startup experience building gamified tools to revolutionize IT talent hiring. 
+                                Pioneered engaging assessment platforms before gamification became mainstream.
+                            </p>
+                            <div class="bg-green-500/10 p-4 rounded-lg border border-green-500/20 mb-4">
+                                <p class="text-green-400 text-sm font-semibold mb-2">
+                                    <i class="fas fa-gamepad mr-2"></i> gamification Pioneer
+                                </p>
+                                <p class="text-gray-200 text-sm">
+                                    Created interactive coding challenges and skill assessments that made technical hiring 
+                                    more engaging and effective
+                                </p>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">JavaScript</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Node.js</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Gamification</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-32 px-6 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-5xl font-display font-bold text-center mb-4 gradient-text glow-text">Projects</h2>
+            <p class="text-center text-gray-400 mb-16">Professional work and passion projects</p>
+            
+            <div class="grid lg:grid-cols-2 gap-10">
+                <!-- Professional Projects -->
+                <div>
+                    <h3 class="text-2xl font-display font-semibold mb-8 text-cyan-400 flex items-center">
+                        <i class="fas fa-briefcase mr-3"></i> Professional
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="project-card glass-card p-8 rounded-xl neon-border">
+                            <h4 class="text-xl font-display font-semibold mb-3 text-white">GenAI Orchestration Platform</h4>
+                            <p class="text-gray-400 mb-4">Orchestrated custom knowledge via APIs to Agentic flows using MS Copilot and direct LLM integrations.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Python</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">LangGraph</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">MCP</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Azure</span>
+                            </div>
+                            <div class="bg-cyan-500/10 p-3 rounded-lg border border-cyan-500/20">
+                                <p class="text-cyan-400 text-sm"><i class="fas fa-chart-line mr-2"></i>200% performance improvement</p>
+                            </div>
+                        </div>
+
+                        <div class="project-card glass-card p-8 rounded-xl neon-border">
+                            <h4 class="text-xl font-display font-semibold mb-3 text-white">API Performance Revolution</h4>
+                            <p class="text-gray-400 mb-4">Scaled public APIs from seconds to sub-500ms, slashing infrastructure costs while boosting UX.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Redis</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">PostgreSQL</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Locust</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">DataDog</span>
+                            </div>
+                            <div class="bg-green-500/10 p-3 rounded-lg border border-green-500/20">
+                                <p class="text-green-400 text-sm"><i class="fas fa-tachometer-alt mr-2"></i>&lt;500ms response time</p>
+                            </div>
+                        </div>
+
+                        <div class="project-card glass-card p-8 rounded-xl neon-border">
+                            <h4 class="text-xl font-display font-semibold mb-3 text-white">Microsoft SalesQualificationAgent</h4>
+                            <p class="text-gray-400 mb-4">Strategic collaboration enabling Microsoft's sales team with AI-powered insights through MCP architecture.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">MCP Server</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">API Bridge</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Copilot Agents</span>
+                            </div>
+                            <div class="bg-blue-500/10 p-3 rounded-lg border border-blue-500/20">
+                                <p class="text-blue-400 text-sm"><i class="fab fa-microsoft mr-2"></i>Microsoft Collaboration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Projects -->
+                <div>
+                    <h3 class="text-2xl font-display font-semibold mb-8 text-purple-400 flex items-center">
+                        <i class="fas fa-heart mr-3"></i> Personal
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="project-card glass-card p-8 rounded-xl neon-border border-red-500/30">
+                            <h4 class="text-xl font-display font-semibold mb-3 text-white flex items-center">
+                                <i class='fas fa-drone mr-3 text-red-400'></i> Custom Surveillance Drone
+                            </h4>
+                            <p class="text-gray-400 mb-4">Built from scratch using open-source hardware. Features autonomous flight paths, real-time video streaming, and computer vision for object detection.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Arduino</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">C++</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">OpenCV</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">IoT</span>
+                            </div>
+                            <div class="bg-red-500/10 p-3 rounded-lg border border-red-500/20">
+                                <p class="text-red-400 text-sm"><i class="fas fa-heart mr-2"></i>Hobby Project</p>
+                            </div>
+                        </div>
+
+                        <div class="project-card glass-card p-8 rounded-xl neon-border border-blue-500/30">
+                            <h4 class="text-xl font-display font-semibold mb-3 text-white flex items-center">
+                                <i class='fas fa-coins mr-3 text-blue-400'></i> Informal Credit Tracker
+                            </h4>
+                            <p class="text-gray-400 mb-4">Empowering small businesses to track informal credit transactions with a simple, mobile-first PWA solution.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">React</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Node.js</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">SQLite</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">PWA</span>
+                            </div>
+                            <div class="bg-blue-500/10 p-3 rounded-lg border border-blue-500/20">
+                                <p class="text-blue-400 text-sm"><i class="fas fa-handshake mr-2"></i>Social Impact</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patent Section -->
+    <section id="patent" class="py-32 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-5xl font-display font-bold text-center mb-4 gradient-text glow-text">Innovation</h2>
+            <p class="text-center text-gray-400 mb-16">Patents and intellectual property</p>
+            <div class="glass-card p-10 rounded-2xl neon-border tilt-card">
+                <div class="flex items-start">
+                    <div class="w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center text-white text-3xl mr-6">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-display font-semibold text-white mb-2">Patent Awarded</h3>
+                        <p class="text-lg text-gray-300 mb-4 font-medium">
+                            System for controlling handheld computing devices with facial expressions and gestures
+                        </p>
+                        <p class="text-sm text-gray-400 mb-4">Application No.: 690/MUM/2013</p>
+                        <div class="bg-yellow-500/10 p-4 rounded-lg border border-yellow-500/20">
+                            <p class="text-gray-300 text-sm">
+                                Pioneering system leveraging computer vision and ML to enable device control through 
+                                facial expressions and gestures - making technology more accessible.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Section -->
+    <section id="github" class="py-32 px-6 bg-gray-900">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-5xl font-display font-bold text-center mb-4 gradient-text glow-text">GitHub Universe</h2>
+            <p class="text-center text-gray-400 mb-16">My open-source contributions and experiments</p>
+            <div class="glass-card p-10 rounded-2xl neon-border">
+                <div class="flex items-center justify-between mb-8">
+                    <div class="flex items-center">
+                        <i class="fab fa-github text-6xl mr-6 text-white"></i>
+                        <div>
+                            <h3 class="text-3xl font-display font-bold text-white">@deepakparyani</h3>
+                            <p class="text-gray-400">github.com/deepakparyani</p>
+                        </div>
+                    </div>
+                    <a href="https://github.com/deepakparyani" target="_blank" class="px-8 py-4 glass-card rounded-full hover:scale-105 transition text-white">
+                        Explore <i class="fas fa-external-link-alt ml-2"></i>
+                    </a>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6 text-center">
+                    <div class="glass-card p-6 rounded-xl">
+                        <div class="text-4xl font-bold text-cyan-400 mb-2" id="github-repos">28</div>
+                        <div class="text-gray-400">Public Repos</div>
+                    </div>
+                    <!-- <div class="glass-card p-6 rounded-xl">
+                        <div class="text-4xl font-bold text-purple-400 mb-2" id="github-stars">150+</div>
+                        <div class="text-gray-400">Total Stars</div>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl">
+                        <div class="text-4xl font-bold text-green-400 mb-2" id="github-followers">89</div>
+                        <div class="text-gray-400">Followers</div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-5xl font-display font-bold text-center mb-4 gradient-text glow-text">Let's Connect</h2>
+            <p class="text-center text-gray-400 mb-16">Ready to build something amazing together?</p>
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="mailto:dev@deepakparyani.dev" class="glass-card p-6 rounded-xl neon-border tilt-card hover:scale-105 transition flex items-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center text-white text-2xl mr-6">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">Email</h3>
+                        <p class="text-gray-400">dev@deepakparyani.dev</p>
+                    </div>
+                </a>
+                <a href="https://linkedin.com/in/deepakparyani" target="_blank" class="glass-card p-6 rounded-xl neon-border tilt-card hover:scale-105 transition flex items-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-white text-2xl mr-6">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">LinkedIn</h3>
+                        <p class="text-gray-400">linkedin.com/in/deepakparyani</p>
+                    </div>
+                </a>
+                <a href="https://github.com/deepakparyani" target="_blank" class="glass-card p-6 rounded-xl neon-border tilt-card hover:scale-105 transition flex items-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-gray-700 to-gray-900 rounded-xl flex items-center justify-center text-white text-2xl mr-6">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">GitHub</h3>
+                        <p class="text-gray-400">github.com/deepakparyani</p>
+                    </div>
+                </a>
+                <div class="glass-card p-6 rounded-xl neon-border tilt-card flex items-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center text-white text-2xl mr-6">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-white">Location</h3>
+                        <p class="text-gray-400">Pune, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 px-6 bg-black border-t border-white/10">
+        <div class="container mx-auto text-center">
+            <div class="text-2xl font-display font-bold gradient-text mb-4">Deepak Paryani</div>
+            <p class="text-gray-400 mb-6">Engineer. Innovator. Boy Dad.</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="https://github.com/deepakparyani" class="text-2xl text-gray-400 hover:text-cyan-400 transition transform hover:scale-110">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/deepakparyani" class="text-2xl text-gray-400 hover:text-blue-400 transition transform hover:scale-110">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:dev@deepakparyani.dev" class="text-2xl text-gray-400 hover:text-red-400 transition transform hover:scale-110">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p class="text-gray-500 text-sm">
+                © 2025 Deepak Paryani. Crafted with <i class="fas fa-heart text-red-500"></i> and copious amounts of coffee.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full text-white text-xl shadow-2xl hover:scale-110 transition transform hover:rotate-90 hidden z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
