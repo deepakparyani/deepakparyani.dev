@@ -28,14 +28,29 @@ defaults:
       layout: post
       author: Deepak Paryani
 
-# Comments (optional). Fill these in from https://giscus.app after installing the
-# Giscus GitHub App and enabling Discussions on the repo; until both ids are set
-# no comment script is rendered at all.
+# Comments. Powered by Giscus (GitHub Discussions) - free, no database, no
+# tracking. Requires the Giscus GitHub App installed on this repo and
+# Discussions enabled. Regenerate the ids at https://giscus.app if you change
+# the repository, mapping or category. Until both ids are set, no comment
+# script is rendered at all.
 giscus:
   repo: deepakparyani/deepakparyani.dev
-  repo_id: ""
+  repo_id: "R_kgDOQkqS0g"
   category: General
-  category_id: ""
+  category_id: "DIC_kwDOQkqS0s4DKu4_"
+  # pathname ties a thread to the URL path (/blog/<slug>/), so renaming a post
+  # file starts a new thread. url also breaks on domain changes; title (and
+  # og:title) break when you edit a headline. pathname is the safest here.
+  mapping: pathname
+  # strict only applies to title / og:title mappings.
+  strict: 0
+  reactions: 1
+  emit_metadata: 0
+  # bottom reads more naturally on long posts; top keeps the box in view.
+  input_position: bottom
+  # dark | dark_dimmed | transparent_dark (blends into any dark background)
+  theme: dark
+  loading: lazy
 
 # Keep build tooling and repo docs out of the published site.
 exclude:

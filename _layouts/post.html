@@ -34,19 +34,22 @@ layout: blog
         {% if site.giscus.repo_id != "" and site.giscus.category_id != "" %}
         <div class="mt-14 pt-8 border-t border-white/10">
             <h2 class="text-xl font-display font-semibold text-white mb-4">Discuss this post</h2>
+            <p class="text-sm text-gray-500 mb-4">
+                Comments are powered by GitHub Discussions &mdash; you'll sign in with a GitHub account.
+            </p>
             <script src="https://giscus.app/client.js"
                     data-repo="{{ site.giscus.repo }}"
                     data-repo-id="{{ site.giscus.repo_id }}"
                     data-category="{{ site.giscus.category }}"
                     data-category-id="{{ site.giscus.category_id }}"
-                    data-mapping="pathname"
-                    data-strict="0"
-                    data-reactions-enabled="1"
-                    data-emit-metadata="0"
-                    data-input-position="top"
-                    data-theme="dark_dimmed"
+                    data-mapping="{{ site.giscus.mapping | default: 'pathname' }}"
+                    data-strict="{{ site.giscus.strict | default: 0 }}"
+                    data-reactions-enabled="{{ site.giscus.reactions | default: 1 }}"
+                    data-emit-metadata="{{ site.giscus.emit_metadata | default: 0 }}"
+                    data-input-position="{{ site.giscus.input_position | default: 'bottom' }}"
+                    data-theme="{{ site.giscus.theme | default: 'dark' }}"
                     data-lang="en"
-                    data-loading="lazy"
+                    data-loading="{{ site.giscus.loading | default: 'lazy' }}"
                     crossorigin="anonymous"
                     async>
             </script>
