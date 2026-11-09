@@ -1,0 +1,52 @@
+# Jekyll configuration.
+# GitHub Pages builds this repo automatically on every push to main - there is
+# no CI workflow and no local build step required to publish.
+
+title: Deepak Paryani
+description: >-
+  Deepak Paryani - Tech Lead at Finarkein Analytics and founder of CereLume
+  Technologies. Notes on agentic AI, fintech infrastructure and building software.
+url: https://deepakparyani.dev
+baseurl: ""
+timezone: Asia/Kolkata
+
+# Posts live in _posts/YYYY-MM-DD-slug.md and are published at /blog/slug/
+permalink: /blog/:title/
+
+# Only plugins GitHub Pages ships with. Anything else would break the build.
+plugins:
+  - jekyll-feed
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Deepak Paryani
+
+# Comments (optional). Fill these in from https://giscus.app after installing the
+# Giscus GitHub App and enabling Discussions on the repo; until both ids are set
+# no comment script is rendered at all.
+giscus:
+  repo: deepakparyani/deepakparyani.dev
+  repo_id: ""
+  category: General
+  category_id: ""
+
+# Keep build tooling and repo docs out of the published site.
+exclude:
+  - node_modules
+  - src
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - README.md
+  - .pages.yml
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - vendor

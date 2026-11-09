@@ -1,0 +1,56 @@
+---
+layout: blog
+---
+<article class="pt-32 pb-20 px-6">
+    <div class="container mx-auto max-w-3xl">
+        <a href="/blog/" class="text-sm text-cyan-400 hover:text-cyan-300 transition">
+            <i class="fas fa-arrow-left mr-2"></i>All writing
+        </a>
+
+        <h1 class="text-4xl md:text-5xl font-display font-bold gradient-text mt-6 mb-5">{{ page.title }}</h1>
+
+        <div class="flex flex-wrap items-center gap-3 text-sm text-gray-400 mb-10">
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+            <span class="text-gray-600">&middot;</span>
+            <span>{{ content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
+            {% if page.tags.size > 0 %}
+            <span class="text-gray-600">&middot;</span>
+            {% for tag in page.tags %}
+            <a href="/blog/tag/{{ tag | slugify }}/" class="skill-pill px-3 py-1 rounded-full text-xs">#{{ tag }}</a>
+            {% endfor %}
+            {% endif %}
+        </div>
+
+        <div class="prose prose-invert max-w-none">
+            {{ content }}
+        </div>
+
+        <p class="mt-12 text-sm">
+            <a href="/blog/" class="text-cyan-400 hover:text-cyan-300 transition">
+                <i class="fas fa-arrow-left mr-2"></i>Back to all writing
+            </a>
+        </p>
+
+        {% if site.giscus.repo_id != "" and site.giscus.category_id != "" %}
+        <div class="mt-14 pt-8 border-t border-white/10">
+            <h2 class="text-xl font-display font-semibold text-white mb-4">Discuss this post</h2>
+            <script src="https://giscus.app/client.js"
+                    data-repo="{{ site.giscus.repo }}"
+                    data-repo-id="{{ site.giscus.repo_id }}"
+                    data-category="{{ site.giscus.category }}"
+                    data-category-id="{{ site.giscus.category_id }}"
+                    data-mapping="pathname"
+                    data-strict="0"
+                    data-reactions-enabled="1"
+                    data-emit-metadata="0"
+                    data-input-position="top"
+                    data-theme="dark_dimmed"
+                    data-lang="en"
+                    data-loading="lazy"
+                    crossorigin="anonymous"
+                    async>
+            </script>
+        </div>
+        {% endif %}
+    </div>
+</article>

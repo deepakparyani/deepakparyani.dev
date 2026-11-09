@@ -1,0 +1,51 @@
+# Pages CMS configuration - a free, browser-based editor for this repo.
+# Sign in at https://app.pagescms.org with GitHub, choose this repository, and a
+# "Posts" collection appears. Saving a post commits a Markdown file to _posts/,
+# which GitHub Pages then builds. Nothing here runs during the build.
+#
+# Docs: https://pagescms.org/docs/configuration/content/
+
+media:
+  input: assets/images
+  output: /assets/images
+
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: _posts
+    # Markdown with YAML front matter - what Jekyll expects.
+    format: yaml-frontmatter
+    # Jekyll only picks up _posts/YYYY-MM-DD-slug.md, so the date must lead.
+    filename:
+      template: "{year}-{month}-{day}-{primary}.md"
+      field: create
+    view:
+      primary: title
+      fields: [title, date, tags, description]
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: string
+        required: true
+        description: One-line summary. Shown on the blog index, in search results and in social previews.
+      - name: date
+        label: Date
+        type: date
+        required: true
+        options:
+          format: "yyyy-MM-dd"
+      - name: tags
+        label: Tags
+        type: string
+        list: true
+        required: true
+        description: Lowercase and hyphenated. A brand-new tag also needs a stub file in blog/tag/.
+      - name: body
+        label: Body
+        type: rich-text
+        required: true

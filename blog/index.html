@@ -1,0 +1,61 @@
+---
+layout: blog
+title: Writing
+description: Notes on agentic AI, fintech infrastructure, and building software that removes work instead of adding it.
+permalink: /blog/
+---
+<section class="pt-32 pb-20 px-6">
+    <div class="container mx-auto max-w-3xl">
+        <h1 class="text-5xl font-display font-bold gradient-text glow-text mb-4">Writing</h1>
+        <p class="text-gray-400 mb-10">
+            Notes on agentic AI, fintech infrastructure, and building software that removes work
+            instead of adding it.
+        </p>
+
+        <!-- Search (progressive enhancement: hidden until js/blog-search.js loads) -->
+        <div id="blog-search-block" class="mb-10 hidden">
+            <label for="blog-search" class="sr-only">Search posts</label>
+            <input id="blog-search" type="search" placeholder="Search posts by title or tag&hellip;" autocomplete="off"
+                   class="w-full glass-card px-5 py-3 rounded-full text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50">
+            <p id="blog-search-status" class="text-sm text-gray-500 mt-2"></p>
+            <div id="blog-search-results" class="mt-4 space-y-3"></div>
+        </div>
+
+        <div class="space-y-6">
+            {% for post in site.posts %}
+            <article class="glass-card p-6 rounded-xl neon-border tilt-card">
+                <a href="{{ post.url }}" class="group">
+                    <h2 class="text-2xl font-display font-semibold text-white group-hover:text-cyan-400 transition mb-2">{{ post.title }}</h2>
+                </a>
+                <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500 mb-3">
+                    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+                    <span>&middot;</span>
+                    <span>{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
+                </div>
+                <p class="text-gray-400 mb-4">
+                    {{ post.description | default: post.excerpt | strip_html | truncatewords: 40 }}
+                </p>
+                {% if post.tags.size > 0 %}
+                <div class="flex flex-wrap gap-2">
+                    {% for tag in post.tags %}
+                    <a href="/blog/tag/{{ tag | slugify }}/" class="skill-pill px-3 py-1 rounded-full text-xs">#{{ tag }}</a>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </article>
+            {% endfor %}
+        </div>
+
+        {% if site.posts.size == 0 %}
+        <p class="text-gray-400">Nothing published yet - the first post is on its way.</p>
+        {% endif %}
+
+        <p class="mt-10 text-sm text-gray-500">
+            <a href="/blog/tags/" class="text-cyan-400 hover:text-cyan-300 transition">Browse by tag</a>
+            <span class="mx-2">&middot;</span>
+            <a href="/feed.xml" class="text-cyan-400 hover:text-cyan-300 transition">Subscribe via RSS</a>
+        </p>
+    </div>
+</section>
+
+<script src="/js/blog-search.js" defer></script>

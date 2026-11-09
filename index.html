@@ -8,6 +8,7 @@
     <meta name="author" content="Deepak Paryani">
     <meta name="theme-color" content="#0A0A0A">
     <link rel="canonical" href="https://deepakparyani.dev/">
+    <link rel="alternate" type="application/atom+xml" title="Deepak Paryani" href="https://deepakparyani.dev/feed.xml">
 
     <!-- Open Graph / social sharing -->
     <meta property="og:type" content="website">
@@ -115,6 +116,7 @@
                     <a href="#experience" class="nav-link text-gray-300 hover:text-white transition">Journey</a>
                     <a href="#skills" class="nav-link text-gray-300 hover:text-white transition">Skills</a>
                     <a href="#projects" class="nav-link text-gray-300 hover:text-white transition">Projects</a>
+                    <a href="blog/" class="nav-link text-gray-300 hover:text-white transition">Writing</a>
                     <a href="#contact" class="nav-link text-gray-300 hover:text-white transition">Connect</a>
                 </div>
                 <button id="nav-toggle" type="button"
@@ -134,6 +136,7 @@
                     <a href="#experience" class="mobile-nav-link text-gray-300 hover:text-white transition">Journey</a>
                     <a href="#skills" class="mobile-nav-link text-gray-300 hover:text-white transition">Skills</a>
                     <a href="#projects" class="mobile-nav-link text-gray-300 hover:text-white transition">Projects</a>
+                    <a href="blog/" class="mobile-nav-link text-cyan-400 hover:text-cyan-300 transition">Writing</a>
                     <a href="#contact" class="mobile-nav-link text-gray-300 hover:text-white transition">Connect</a>
                     <a href="resume.html" class="mobile-nav-link text-cyan-400 hover:text-cyan-300 transition">Résumé</a>
                 </div>
@@ -865,6 +868,29 @@
         </div>
     </section>
 
+    <!-- Latest Writing Section -->
+    <section id="writing" class="py-20 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <div class="glass-card p-8 rounded-2xl neon-border fade-in">
+                <div class="flex flex-wrap items-center justify-between gap-4 mb-5">
+                    <h2 class="text-2xl font-display font-semibold text-white flex items-center">
+                        <i class="fas fa-pen-nib mr-3 text-cyan-400"></i> Latest writing
+                    </h2>
+                    <a href="blog/" class="text-sm text-cyan-400 hover:text-cyan-300 transition">
+                        All posts <i class="fas fa-arrow-right ml-1"></i>
+                    </a>
+                </div>
+                <div id="latest-posts" class="space-y-3" hidden>
+                    <!-- Filled by js/latest-posts.js from /blog/search.json -->
+                </div>
+                <p id="latest-posts-fallback" class="text-gray-400 text-sm">
+                    <a href="blog/" class="text-cyan-400 hover:text-cyan-300 transition">Browse the blog</a>
+                    for notes on agentic AI, fintech infrastructure and building software.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Patent Section -->
     <section id="patent" class="py-32 px-6">
         <div class="container mx-auto max-w-4xl">
@@ -998,6 +1024,10 @@
                 <a href="resume.html" class="text-gray-400 hover:text-cyan-400 transition">
                     <i class="fas fa-file-alt mr-2"></i>Résumé
                 </a>
+                <span class="text-gray-600 mx-2">&middot;</span>
+                <a href="blog/" class="text-gray-400 hover:text-cyan-400 transition">
+                    <i class="fas fa-pen-nib mr-2"></i>Writing
+                </a>
             </p>
         </div>
     </footer>
@@ -1008,6 +1038,7 @@
     </button>
 
     <script src="js/main.js"></script>
+    <script src="js/latest-posts.js" defer></script>
 
     <!-- Analytics (optional, cookieless): create a free account at goatcounter.com
          and put your site code below, e.g. 'deepakparyani'. Empty = disabled. -->

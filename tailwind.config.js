@@ -6,10 +6,17 @@ module.exports = {
     './index.html',
     './resume.html',
     './404.html',
+    // Jekyll layouts, blog pages and Markdown posts
+    './_layouts/**/*.html',
+    './_posts/**/*.md',
+    './blog/**/*.{html,json}',
     './js/**/*.js'
   ],
   theme: {
     extend: {}
   },
-  plugins: []
+  plugins: [
+    // Styles Markdown output inside `prose prose-invert`
+    require('@tailwindcss/typography')
+  ]
 };

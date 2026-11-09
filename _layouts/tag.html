@@ -1,0 +1,39 @@
+---
+layout: blog
+---
+{% assign tagged = site.posts | where_exp: "post", "post.tags contains page.tag" %}
+<section class="pt-32 pb-20 px-6">
+    <div class="container mx-auto max-w-3xl">
+        <a href="/blog/" class="text-sm text-cyan-400 hover:text-cyan-300 transition">
+            <i class="fas fa-arrow-left mr-2"></i>All writing
+        </a>
+
+        <h1 class="text-4xl md:text-5xl font-display font-bold gradient-text mt-6 mb-3">#{{ page.tag }}</h1>
+        <p class="text-gray-400 mb-10">
+            {{ tagged.size }} {% if tagged.size == 1 %}post{% else %}posts{% endif %} tagged
+            <span class="text-cyan-400">#{{ page.tag }}</span>.
+        </p>
+
+        <div class="space-y-6">
+            {% for post in tagged %}
+            <article class="glass-card p-6 rounded-xl neon-border tilt-card">
+                <a href="{{ post.url }}" class="group">
+                    <h2 class="text-2xl font-display font-semibold text-white group-hover:text-cyan-400 transition mb-2">{{ post.title }}</h2>
+                </a>
+                <div class="flex flex-wrap items-center gap-3 text-sm text-gray-500 mb-3">
+                    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+                    <span>&middot;</span>
+                    <span>{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read</span>
+                </div>
+                <p class="text-gray-400">{{ post.description | default: post.excerpt | strip_html | truncatewords: 40 }}</p>
+            </article>
+            {% endfor %}
+        </div>
+
+        <p class="mt-10 text-sm text-gray-500">
+            <a href="/blog/tags/" class="text-cyan-400 hover:text-cyan-300 transition">All tags</a>
+            <span class="mx-2">&middot;</span>
+            <a href="/feed.xml" class="text-cyan-400 hover:text-cyan-300 transition">Subscribe via RSS</a>
+        </p>
+    </div>
+</section>
