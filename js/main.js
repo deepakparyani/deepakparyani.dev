@@ -4,10 +4,38 @@
 const themeToggle = document.getElementById('theme-toggle');
 const html = document.documentElement;
 
+// Mobile navigation
+const navToggle = document.getElementById('nav-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (navToggle && mobileMenu) {
+    const setMenu = (open) => {
+        mobileMenu.classList.toggle('hidden', !open);
+        navToggle.setAttribute('aria-expanded', String(open));
+        const icon = navToggle.querySelector('i');
+        if (icon) icon.className = open ? 'fas fa-times text-xl' : 'fas fa-bars text-xl';
+    };
+
+    navToggle.addEventListener('click', () => {
+        setMenu(mobileMenu.classList.contains('hidden'));
+    });
+
+    // Close the menu once a destination is picked
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => setMenu(false));
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') setMenu(false);
+    });
+}
+
 // Particle Background
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const canvas = document.getElementById('particle-canvas');
 const ctx = canvas.getContext('2d');
 let particles = [];
+let particlesRunning = false;
 
 function resizeCanvas() {
     canvas.width = window.innerWidth;
@@ -45,12 +73,16 @@ class Particle {
 }
 
 // Initialize particles
-for (let i = 0; i < 100; i++) {
-    particles.push(new Particle());
+if (!prefersReducedMotion) {
+    for (let i = 0; i < 100; i++) {
+        particles.push(new Particle());
+    }
 }
 
 // Animation loop
 function animateParticles() {
+    if (!particlesRunning) return;
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     particles.forEach(particle => {
         particle.update();
@@ -58,19 +90,35 @@ function animateParticles() {
     });
     requestAnimationFrame(animateParticles);
 }
-animateParticles();
+
+if (!prefersReducedMotion) {
+    particlesRunning = true;
+    animateParticles();
+}
+
+// Stop the loop while the tab is in the background
+document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+        particlesRunning = false;
+    } else if (!prefersReducedMotion && !particlesRunning) {
+        particlesRunning = true;
+        animateParticles();
+    }
+});
 
 // Mouse parallax effect
-document.addEventListener('mousemove', (e) => {
-    const mouseX = e.clientX / window.innerWidth - 0.5;
-    const mouseY = e.clientY / window.innerHeight - 0.5;
-    
-    particles.forEach((particle, index) => {
-        const speed = (index % 5 + 1) * 0.01;
-        particle.x += mouseX * speed;
-        particle.y += mouseY * speed;
+if (!prefersReducedMotion) {
+    document.addEventListener('mousemove', (e) => {
+        const mouseX = e.clientX / window.innerWidth - 0.5;
+        const mouseY = e.clientY / window.innerHeight - 0.5;
+
+        particles.forEach((particle, index) => {
+            const speed = (index % 5 + 1) * 0.01;
+            particle.x += mouseX * speed;
+            particle.y += mouseY * speed;
+        });
     });
-});
+}
 
 // Smooth scroll with offset
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -109,43 +157,62 @@ document.querySelectorAll('.fade-in').forEach(el => {
 const skillPills = document.querySelectorAll('.skill-pill');
 skillPills.forEach((pill, index) => {
     pill.style.animationDelay = `${index * 0.1}s`;
-    pill.addEventListener('mouseenter', () => {
-        pill.style.transform = 'scale(1.1) rotate(2deg)';
-    });
-    pill.addEventListener('mouseleave', () => {
-        pill.style.transform = 'scale(1) rotate(0deg)';
-    });
 });
 
-// Magnetic button effect
-const buttons = document.querySelectorAll('button, .tilt-card');
-buttons.forEach(button => {
-    button.addEventListener('mousemove', (e) => {
-        const rect = button.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        const deltaX = (e.clientX - centerX) / 10;
-        const deltaY = (e.clientY - centerY) / 10;
-        
-        button.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+// Hover/magnetic effects are skipped for visitors who prefer reduced motion
+if (!prefersReducedMotion) {
+    skillPills.forEach(pill => {
+        pill.addEventListener('mouseenter', () => {
+            pill.style.transform = 'scale(1.1) rotate(2deg)';
+        });
+        pill.addEventListener('mouseleave', () => {
+            pill.style.transform = 'scale(1) rotate(0deg)';
+        });
     });
-    
-    button.addEventListener('mouseleave', () => {
-        button.style.transform = 'translate(0, 0)';
-    });
-});
 
-// GitHub Stats (with mock data for demo)
+    // Magnetic button effect
+    const buttons = document.querySelectorAll('button, .tilt-card');
+    buttons.forEach(button => {
+        button.addEventListener('mousemove', (e) => {
+            const rect = button.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            const deltaX = (e.clientX - centerX) / 10;
+            const deltaY = (e.clientY - centerY) / 10;
+
+            button.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
+        });
+
+        button.addEventListener('mouseleave', () => {
+            button.style.transform = 'translate(0, 0)';
+        });
+    });
+}
+
+// GitHub stats - real API call, falls back to the static numbers in the HTML
 async function fetchGitHubStats() {
+    const reposEl = document.getElementById('github-repos');
+    if (!reposEl) return;
+
     try {
-        // For demo purposes - replace with real API call if needed
-        setTimeout(() => {
-            document.getElementById('github-repos').textContent = '42';
-            document.getElementById('github-stars').textContent = '150+';
-            document.getElementById('github-followers').textContent = '89';
-        }, 1000);
+        const response = await fetch('https://api.github.com/users/deepakparyani');
+        if (!response.ok) return;
+
+        const data = await response.json();
+        const updates = {
+            'github-repos': data.public_repos,
+            'github-followers': data.followers
+        };
+
+        Object.entries(updates).forEach(([id, value]) => {
+            const el = document.getElementById(id);
+            if (el && typeof value === 'number') {
+                el.textContent = String(value);
+            }
+        });
     } catch (error) {
-        console.log('Using mock data');
+        // Offline or rate limited - the hardcoded fallback is already on the page
+        console.log('GitHub stats unavailable, keeping static values');
     }
 }
 
@@ -176,32 +243,4 @@ backToTop.addEventListener('click', () => {
         top: 0,
         behavior: 'smooth'
     });
-});
-
-// Typing effect for hero
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.textContent = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    type();
-}
-
-// Initialize typing effect on load
-window.addEventListener('load', () => {
-    const heroTitle = document.querySelector('#home h1');
-    if (heroTitle) {
-        const originalText = heroTitle.innerHTML;
-        // Store original and re-render with animation
-        heroTitle.innerHTML = '<span class="gradient-text glow-text">Deepak</span>';
-        setTimeout(() => {
-            typeWriter(heroTitle, "Hi, I'm Deepak", 150);
-        }, 500);
-    }
 });

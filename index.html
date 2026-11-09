@@ -3,8 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deepak Paryani | Software Engineer</title>
-    <meta name="description" content="Deepak Paryani - 12+ years building scalable systems, GenAI orchestration, and high-performance APIs">
+    <title>Deepak Paryani | Tech Lead &amp; Founder</title>
+    <meta name="description" content="Deepak Paryani - 14+ years building scalable systems, agentic GenAI flows, and high-performance APIs. Tech Lead at Finarkein Analytics, founder of CereLume Technologies.">
+    <meta name="author" content="Deepak Paryani">
+    <meta name="theme-color" content="#0A0A0A">
+    <link rel="canonical" href="https://deepakparyani.dev/">
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Deepak Paryani">
+    <meta property="og:url" content="https://deepakparyani.dev/">
+    <meta property="og:title" content="Deepak Paryani | Tech Lead &amp; Founder">
+    <meta property="og:description" content="14+ years building scalable APIs, agentic GenAI flows and fintech products. Tech Lead at Finarkein Analytics, founder of CereLume Technologies (Vendonow).">
+    <meta property="og:image" content="https://deepakparyani.dev/assets/images/profile.jpg">
+    <meta property="og:image:alt" content="Deepak Paryani">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Deepak Paryani | Tech Lead &amp; Founder">
+    <meta name="twitter:description" content="14+ years building scalable APIs, agentic GenAI flows and fintech products. Tech Lead at Finarkein Analytics, founder of CereLume Technologies (Vendonow).">
+    <meta name="twitter:image" content="https://deepakparyani.dev/assets/images/profile.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0A'/%3E%3Ctext x='32' y='44' font-family='Arial,Helvetica,sans-serif' font-size='28' font-weight='bold' text-anchor='middle' fill='%2300F5FF'%3EDP%3C/text%3E%3C/svg%3E">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Deepak Paryani",
+      "url": "https://deepakparyani.dev/",
+      "image": "https://deepakparyani.dev/assets/images/profile.jpg",
+      "jobTitle": "Tech Lead & Founder",
+      "description": "Software engineer with 14+ years of experience across Python, Java enterprise systems and agentic AI.",
+      "email": "mailto:dev@deepakparyani.dev",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pune",
+        "addressCountry": "IN"
+      },
+      "worksFor": [
+        {
+          "@type": "Organization",
+          "name": "Finarkein Analytics",
+          "url": "https://finarkein.com"
+        },
+        {
+          "@type": "Organization",
+          "name": "CereLume Technologies"
+        }
+      ],
+      "sameAs": [
+        "https://github.com/deepakparyani",
+        "https://linkedin.com/in/deepakparyani"
+      ],
+      "knowsAbout": [
+        "Agentic AI",
+        "Generative AI",
+        "Account Aggregator",
+        "Fintech",
+        "Python",
+        "Java",
+        "API Design",
+        "System Design"
+      ]
+    }
+    </script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,16 +86,18 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <a href="#home" class="skip-link">Skip to content</a>
     
     <!-- Animated Background -->
-    <canvas class="particle-bg" id="particle-canvas"></canvas>
+    <canvas class="particle-bg" id="particle-canvas" aria-hidden="true"></canvas>
     
-    <!-- Floating Open to Opportunities Badge -->
+    <!-- Floating Current Role Badge -->
     <div class="fixed top-24 right-8 z-50 floating-badge">
-        <div class="glass-card px-6 py-3 rounded-full neon-border pulse-glow">
+        <div class="glass-card px-5 py-3 rounded-full neon-border pulse-glow">
             <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span class="text-sm font-semibold text-green-400">Open to Opportunities</span>
+                <span class="text-xs font-semibold text-green-400 whitespace-nowrap">Founder @ CereLume &middot; Tech Lead @ Finarkein</span>
             </div>
         </div>
     </div>
@@ -39,9 +106,9 @@
     <nav class="fixed top-0 w-full z-50 glass-card border-b border-white/10">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <div class="text-3xl font-display font-bold gradient-text glow-text">
+                <a href="#home" class="text-3xl font-display font-bold gradient-text glow-text">
                     DP
-                </div>
+                </a>
                 <div class="hidden md:flex space-x-10">
                     <a href="#home" class="nav-link text-gray-300 hover:text-white transition">Home</a>
                     <a href="#about" class="nav-link text-gray-300 hover:text-white transition">About</a>
@@ -50,9 +117,25 @@
                     <a href="#projects" class="nav-link text-gray-300 hover:text-white transition">Projects</a>
                     <a href="#contact" class="nav-link text-gray-300 hover:text-white transition">Connect</a>
                 </div>
+                <button id="nav-toggle" type="button"
+                        class="md:hidden p-3 rounded-lg text-gray-300 hover:text-white transition"
+                        aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
                 <!-- <button id="theme-toggle" class="p-3 rounded-full glass-card hover:scale-110 transition">
                     <i class="fas fa-moon text-white"></i>
                 </button> -->
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4 pt-4 border-t border-white/10" aria-label="Mobile navigation">
+                <div class="flex flex-col space-y-4 pb-2">
+                    <a href="#home" class="mobile-nav-link text-gray-300 hover:text-white transition">Home</a>
+                    <a href="#about" class="mobile-nav-link text-gray-300 hover:text-white transition">About</a>
+                    <a href="#experience" class="mobile-nav-link text-gray-300 hover:text-white transition">Journey</a>
+                    <a href="#skills" class="mobile-nav-link text-gray-300 hover:text-white transition">Skills</a>
+                    <a href="#projects" class="mobile-nav-link text-gray-300 hover:text-white transition">Projects</a>
+                    <a href="#contact" class="mobile-nav-link text-gray-300 hover:text-white transition">Connect</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -66,18 +149,18 @@
                         Hi, I'm <span class="gradient-text glow-text">Deepak</span>
                     </h1>
                     <h2 class="text-3xl md:text-4xl text-gray-400 mb-6 font-light">
-                        Software Engineer
+                        Tech Lead &amp; Founder
                     </h2>
                     <p class="text-lg text-gray-300 mb-8 max-w-lg">
-                        12+ years building <span class="text-cyan-400 font-semibold">scalable APIs</span>, 
-                        orchestrating <span class="text-purple-400 font-semibold">GenAI flows</span>, and 
-                        solving complex technical challenges.
+                        14+ years building <span class="text-cyan-400 font-semibold">scalable APIs</span>, 
+                        orchestrating <span class="text-purple-400 font-semibold">agentic GenAI flows</span>, and now 
+                        leading teams and a startup of my own.
                     </p>
                     <div class="flex flex-wrap gap-4 mb-12">
-                        <button class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full font-semibold hover:scale-105 transition transform shadow-lg hover:shadow-cyan-500/25">
+                        <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full font-semibold hover:scale-105 transition transform shadow-lg hover:shadow-cyan-500/25">
                             View My Work <i class="fas fa-arrow-right ml-2"></i>
-                        </button>
-                        <a href="https://github.com/deepakparyani" target="_blank" class="px-8 py-4 glass-card rounded-full hover:scale-105 transition transform text-white">
+                        </a>
+                        <a href="https://github.com/deepakparyani" target="_blank" rel="noopener" class="px-8 py-4 glass-card rounded-full hover:scale-105 transition transform text-white">
                             <i class="fab fa-github mr-2"></i> GitHub
                         </a>
                     </div>
@@ -108,14 +191,25 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="md:col-span-2 glass-card p-8 rounded-2xl neon-border">
                     <p class="text-lg text-gray-300 mb-6">
-                        I'm a seasoned software engineer with <span class="text-cyan-400 font-semibold">12+ years</span> 
-                        of experience spanning Python Ecosystem,Java enterprise systems to cutting-edge GenAI applications. My superpower? 
-                        Turning complex business problems into elegant, scalable solutions.
+                        I'm a seasoned software engineer with <span class="text-cyan-400 font-semibold">14+ years</span> 
+                        of experience spanning the Python ecosystem, Java enterprise systems and cutting-edge agentic AI. 
+                        My superpower? Turning complex business problems into elegant, scalable solutions.
                     </p>
                     <p class="text-lg text-gray-300 mb-6">
-                        At <span class="text-purple-400 font-semibold">Enlyft Inc</span>, I lead backend initiatives that 
-                        have boosted API performance by ~200% and orchestrated GenAI flows that empower sales teams with 
-                        intelligent insights.
+                        Today I'm Tech Lead at <span class="text-purple-400 font-semibold">Finarkein Analytics</span>, building
+                        agentic flows that remove hours of manual work from developer and ops teams every day, across
+                        India's Account Aggregator ecosystem and the products around it - OpenLink, Intelligent Document
+                        Parsing and SMS Intelligence.
+                    </p>
+                    <p class="text-lg text-gray-300 mb-6">
+                        In Dec 2025 I founded <span class="text-green-400 font-semibold">CereLume Technologies</span>, where
+                        we're building <span class="text-green-400 font-semibold">Vendonow</span> - local business management
+                        software that helps small businesses run their day-to-day operations from one place.
+                    </p>
+                    <p class="text-lg text-gray-300 mb-6">
+                        Before that, at <span class="text-purple-400 font-semibold">Enlyft Inc</span>, I led backend
+                        initiatives that boosted API performance by ~200% and orchestrated GenAI flows that empowered sales
+                        teams with intelligent insights.
                     </p>
                     <p class="text-lg text-gray-300 mb-6">
                         When I'm not optimizing systems or experimenting with LLMs, you'll find me building drones, 
@@ -130,7 +224,7 @@
                 </div>
                 <div class="space-y-6">
                     <div class="glass-card p-6 rounded-xl neon-border tilt-card">
-                        <h3 class="text-3xl font-bold text-cyan-400 mb-2">12+</h3>
+                        <h3 class="text-3xl font-bold text-cyan-400 mb-2">14+</h3>
                         <p class="text-gray-400">Years Experience</p>
                     </div>
                     <div class="glass-card p-6 rounded-xl neon-border tilt-card">
@@ -190,11 +284,12 @@
                         <i class="fas fa-robot"></i>
                     </div>
                     <h3 class="text-xl font-semibold mb-3 text-white">GenAI Stack</h3>
-                    <p class="text-gray-400 mb-4 text-sm">LLMs, LangGraph, MCP</p>
+                    <p class="text-gray-400 mb-4 text-sm">LLMs, LangGraph, MCP, Agentic Flows</p>
                     <div class="flex flex-wrap gap-2">
                         <span class="skill-pill px-3 py-1 rounded-full text-xs">OpenAI</span>
                         <span class="skill-pill px-3 py-1 rounded-full text-xs">LangGraph</span>
                         <span class="skill-pill px-3 py-1 rounded-full text-xs">MCP</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Agentic Flows</span>
                     </div>
                 </div>
 
@@ -282,6 +377,49 @@
                         <span class="skill-pill px-3 py-1 rounded-full text-xs">DataDog</span>
                     </div>
                 </div>
+
+                <!-- Agentic Automation -->
+                <div class="glass-card p-6 rounded-xl neon-border tilt-card group">
+                    <div class="text-5xl mb-4 bg-gradient-to-r from-fuchsia-500 to-cyan-600 bg-clip-text text-transparent">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Agentic Automation</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Multi-step agent flows, tool use, workflow automation</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Agentic Flows</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Tool Calling</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Workflow Automation</span>
+                    </div>
+                </div>
+
+                <!-- Fintech Domain -->
+                <div class="glass-card p-6 rounded-xl neon-border tilt-card group">
+                    <div class="text-5xl mb-4 bg-gradient-to-r from-emerald-500 to-cyan-600 bg-clip-text text-transparent">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Fintech Domain</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Account Aggregator, lending & insurance journeys, financial data</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Account Aggregator</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Lending</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Insurance</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Financial Data</span>
+                    </div>
+                </div>
+
+                <!-- Document & Message AI -->
+                <div class="glass-card p-6 rounded-xl neon-border tilt-card group">
+                    <div class="text-5xl mb-4 bg-gradient-to-r from-sky-500 to-indigo-600 bg-clip-text text-transparent">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-white">Document &amp; Message AI</h3>
+                    <p class="text-gray-400 mb-4 text-sm">Intelligent Document Parsing, SMS intelligence, structured extraction</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">IDP</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">SMS Intelligence</span>
+                        <span class="skill-pill px-3 py-1 rounded-full text-xs">Extraction</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -290,22 +428,120 @@
     <section id="experience" class="py-32 px-6">
         <div class="container mx-auto max-w-6xl">
             <h2 class="text-5xl font-display font-bold text-center mb-4 gradient-text glow-text">Journey</h2>
-            <p class="text-center text-gray-400 mb-16">From gamified hiring to GenAI orchestration</p>
+            <p class="text-center text-gray-400 mb-16">From gamified hiring to agentic fintech platforms</p>
             <div class="relative">
                 <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-cyan-500 to-purple-600"></div>
                 
-                <!-- Enlyft (Current) -->
+                <!-- Finarkein Analytics (Current - Tech Lead) -->
+                <div class="relative mb-16 fade-in">
+                    <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 timeline-dot rounded-full border-4 border-black"></div>
+                    <div class="ml-20 md:ml-0 md:w-1/2 md:pr-12">
+                        <div class="glass-card p-8 rounded-xl neon-border tilt-card">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-display font-semibold text-white">Tech Lead</h3>
+                                <span class="text-xs bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full whitespace-nowrap">Jan 2026 - Present</span>
+                            </div>
+                            <p class="text-purple-400 text-lg mb-4 font-medium">
+                                <a href="https://finarkein.com" target="_blank" rel="noopener" class="hover:text-purple-300 transition underline decoration-purple-500/40 underline-offset-4">Finarkein Analytics</a>
+                            </p>
+                            <p class="text-gray-300 mb-6">
+                                Leading agentic AI initiatives across India's Account Aggregator ecosystem - building flows that
+                                automate work worth hours of a developer's day, every single day.
+                            </p>
+                            <!-- OpenLink Highlight -->
+                            <div class="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 p-4 rounded-lg border border-purple-500/30 mb-4">
+                                <p class="text-purple-300 text-sm font-semibold mb-2">
+                                    <i class="fas fa-network-wired mr-2"></i>OpenLink
+                                </p>
+                                <p class="text-gray-200 text-sm">
+                                    A hub for all sellers and buyers of financial products - insurance, loans or any other
+                                    Fin Product - instead of scattered, disconnected channels.
+                                </p>
+                            </div>
+                            <ul class="text-gray-400 text-sm space-y-2 mb-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-cyan-500 mt-1 mr-3"></i>
+                                    Created agentic flows that automate workflows worth hours of a developer's time daily
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-cyan-500 mt-1 mr-3"></i>
+                                    Handling multiple teams across Account Aggregator and the domains around it
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-cyan-500 mt-1 mr-3"></i>
+                                    Intelligent Document Parsing - structured data out of messy financial documents
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-cyan-500 mt-1 mr-3"></i>
+                                    SMS Intelligence - turning raw message streams into usable financial signals
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Agentic AI</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Python</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Account Aggregator</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">LangGraph</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CereLume Technologies (Founder) -->
+                <div class="relative mb-16 fade-in">
+                    <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 timeline-dot rounded-full border-4 border-black"></div>
+                    <div class="ml-20 md:ml-0 md:w-1/2 md:pl-12 md:ml-auto">
+                        <div class="glass-card p-8 rounded-xl neon-border tilt-card">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-2xl font-display font-semibold text-white">Founder</h3>
+                                <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1 rounded-full whitespace-nowrap">Dec 2025 - Present</span>
+                            </div>
+                            <p class="text-purple-400 text-lg mb-4 font-medium">CereLume Technologies</p>
+                            <p class="text-gray-300 mb-6">
+                                Founded CereLume Technologies and built Vendonow under it - local business management
+                                software for the shops and services that keep a city running.
+                            </p>
+                            <!-- Vendonow Highlight -->
+                            <div class="bg-green-500/10 p-4 rounded-lg border border-green-500/20 mb-4">
+                                <p class="text-green-400 text-sm font-semibold mb-2">
+                                    <i class="fas fa-store mr-2"></i>
+                                    <a href="https://vendonow.com" target="_blank" rel="noopener" class="hover:text-green-300 transition underline decoration-green-500/40 underline-offset-4">Vendonow.com</a>
+                                </p>
+                                <p class="text-gray-200 text-sm">
+                                    A local business management SaaS - one place for a small business to run its
+                                    day-to-day operations instead of juggling registers, spreadsheets and notebooks.
+                                </p>
+                            </div>
+                            <ul class="text-gray-400 text-sm space-y-2 mb-4">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                    Founded CereLume Technologies as the company behind Vendonow
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                                    Owned the product end to end - from architecture and build to first customers
+                                </li>
+                            </ul>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">SaaS</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Product Engineering</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Founder</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enlyft -->
                 <div class="relative mb-16 fade-in">
                     <div class="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 timeline-dot rounded-full border-4 border-black"></div>
                     <div class="ml-20 md:ml-0 md:w-1/2 md:pr-12">
                         <div class="glass-card p-8 rounded-xl neon-border tilt-card">
                             <div class="flex justify-between items-start mb-4">
                                 <h3 class="text-2xl font-display font-semibold text-white">Senior Software Engineer</h3>
-                                <span class="text-xs bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full">2023 - Present</span>
+                                <span class="text-xs bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full whitespace-nowrap">2023 - 2026</span>
                             </div>
                             <p class="text-purple-400 text-lg mb-4 font-medium">Enlyft Inc.</p>
                             <p class="text-gray-300 mb-6">
-                                Leading GenAI orchestration and API performance initiatives. Built MCP layer extracting 
+                                Led GenAI orchestration and API performance initiatives. Built an MCP layer extracting 
                                 B2B sales intelligence and scaled APIs by ~200%.
                             </p>
                             <!-- Microsoft Collaboration Highlight -->
@@ -420,15 +656,54 @@
     <section id="projects" class="py-32 px-6 bg-gradient-to-b from-gray-900 to-black">
         <div class="container mx-auto max-w-6xl">
             <h2 class="text-5xl font-display font-bold text-center mb-4 gradient-text glow-text">Projects</h2>
-            <p class="text-center text-gray-400 mb-16">Professional work and passion projects</p>
+            <p class="text-center text-gray-400 mb-16">Shipped at work, built on my own, tinkered at home</p>
             
-            <div class="grid lg:grid-cols-2 gap-10">
+            <div class="grid lg:grid-cols-3 gap-10">
                 <!-- Professional Projects -->
                 <div>
                     <h3 class="text-2xl font-display font-semibold mb-8 text-cyan-400 flex items-center">
                         <i class="fas fa-briefcase mr-3"></i> Professional
                     </h3>
                     <div class="space-y-6">
+                        <div class="project-card glass-card p-8 rounded-xl neon-border">
+                            <h4 class="text-xl font-display font-semibold mb-3 text-white">OpenLink</h4>
+                            <p class="text-gray-400 mb-4">A hub connecting sellers and buyers of every financial product - insurance, loans or anything else in the Fin space - in one marketplace instead of scattered channels.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Marketplace</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Account Aggregator</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Fintech</span>
+                            </div>
+                            <div class="bg-purple-500/10 p-3 rounded-lg border border-purple-500/20">
+                                <p class="text-purple-400 text-sm"><i class="fas fa-network-wired mr-2"></i>Finarkein Analytics</p>
+                            </div>
+                        </div>
+
+                        <div class="project-card glass-card p-8 rounded-xl neon-border">
+                            <h4 class="text-xl font-display font-semibold mb-3 text-white">Agentic Workflow Automation</h4>
+                            <p class="text-gray-400 mb-4">Designed agentic flows that take over the repetitive parts of engineering and ops work - saving hours of a developer's time, every day.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Agentic Flows</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">LangGraph</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Python</span>
+                            </div>
+                            <div class="bg-cyan-500/10 p-3 rounded-lg border border-cyan-500/20">
+                                <p class="text-cyan-400 text-sm"><i class="fas fa-bolt mr-2"></i>Hours saved daily</p>
+                            </div>
+                        </div>
+
+                        <div class="project-card glass-card p-8 rounded-xl neon-border">
+                            <h4 class="text-xl font-display font-semibold mb-3 text-white">Document &amp; SMS Intelligence</h4>
+                            <p class="text-gray-400 mb-4">Intelligent Document Parsing and SMS intelligence - turning unstructured financial documents and messy message streams into clean, usable data.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">IDP</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">SMS Intelligence</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">LLMs</span>
+                            </div>
+                            <div class="bg-emerald-500/10 p-3 rounded-lg border border-emerald-500/20">
+                                <p class="text-emerald-400 text-sm"><i class="fas fa-file-alt mr-2"></i>Unstructured to structured</p>
+                            </div>
+                        </div>
+
                         <div class="project-card glass-card p-8 rounded-xl neon-border">
                             <h4 class="text-xl font-display font-semibold mb-3 text-white">GenAI Orchestration Platform</h4>
                             <p class="text-gray-400 mb-4">Orchestrated custom knowledge via APIs to Agentic flows using MS Copilot and direct LLM integrations.</p>
@@ -467,6 +742,48 @@
                             </div>
                             <div class="bg-blue-500/10 p-3 rounded-lg border border-blue-500/20">
                                 <p class="text-blue-400 text-sm"><i class="fab fa-microsoft mr-2"></i>Microsoft Collaboration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ventures -->
+                <div>
+                    <h3 class="text-2xl font-display font-semibold mb-8 text-green-400 flex items-center">
+                        <i class="fas fa-rocket mr-3"></i> Ventures
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="project-card glass-card p-8 rounded-xl neon-border border-green-500/30">
+                            <h4 class="text-xl font-display font-semibold mb-3 text-white flex items-center">
+                                <i class="fas fa-store mr-3 text-green-400"></i> Vendonow
+                            </h4>
+                            <p class="text-gray-400 mb-4">Local business management SaaS - one place for a small business to run its day-to-day operations instead of juggling registers, spreadsheets and notebooks.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">SaaS</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Product</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Local Business</span>
+                            </div>
+                            <div class="bg-green-500/10 p-3 rounded-lg border border-green-500/20">
+                                <p class="text-green-400 text-sm">
+                                    <a href="https://vendonow.com" target="_blank" rel="noopener" class="hover:text-green-300 transition underline decoration-green-500/40 underline-offset-4">
+                                        <i class="fas fa-arrow-up-right-from-square mr-2"></i>vendonow.com
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="project-card glass-card p-8 rounded-xl neon-border border-green-500/30">
+                            <h4 class="text-xl font-display font-semibold mb-3 text-white flex items-center">
+                                <i class="fas fa-lightbulb mr-3 text-green-400"></i> CereLume Technologies
+                            </h4>
+                            <p class="text-gray-400 mb-4">The company I founded in Dec 2025 to build software for small local businesses - Vendonow is the first offering under it.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Founder</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">SaaS</span>
+                                <span class="skill-pill px-3 py-1 rounded-full text-xs">Product Engineering</span>
+                            </div>
+                            <div class="bg-green-500/10 p-3 rounded-lg border border-green-500/20">
+                                <p class="text-green-400 text-sm"><i class="fas fa-seedling mr-2"></i>Founded Dec 2025</p>
                             </div>
                         </div>
                     </div>
@@ -557,7 +874,7 @@
                             <p class="text-gray-400">github.com/deepakparyani</p>
                         </div>
                     </div>
-                    <a href="https://github.com/deepakparyani" target="_blank" class="px-8 py-4 glass-card rounded-full hover:scale-105 transition text-white">
+                    <a href="https://github.com/deepakparyani" target="_blank" rel="noopener" class="px-8 py-4 glass-card rounded-full hover:scale-105 transition text-white">
                         Explore <i class="fas fa-external-link-alt ml-2"></i>
                     </a>
                 </div>
@@ -594,7 +911,7 @@
                         <p class="text-gray-400">dev@deepakparyani.dev</p>
                     </div>
                 </a>
-                <a href="https://linkedin.com/in/deepakparyani" target="_blank" class="glass-card p-6 rounded-xl neon-border tilt-card hover:scale-105 transition flex items-center">
+                <a href="https://linkedin.com/in/deepakparyani" target="_blank" rel="noopener" class="glass-card p-6 rounded-xl neon-border tilt-card hover:scale-105 transition flex items-center">
                     <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center text-white text-2xl mr-6">
                         <i class="fab fa-linkedin"></i>
                     </div>
@@ -603,7 +920,7 @@
                         <p class="text-gray-400">linkedin.com/in/deepakparyani</p>
                     </div>
                 </a>
-                <a href="https://github.com/deepakparyani" target="_blank" class="glass-card p-6 rounded-xl neon-border tilt-card hover:scale-105 transition flex items-center">
+                <a href="https://github.com/deepakparyani" target="_blank" rel="noopener" class="glass-card p-6 rounded-xl neon-border tilt-card hover:scale-105 transition flex items-center">
                     <div class="w-16 h-16 bg-gradient-to-r from-gray-700 to-gray-900 rounded-xl flex items-center justify-center text-white text-2xl mr-6">
                         <i class="fab fa-github"></i>
                     </div>
@@ -642,13 +959,13 @@
                 </a>
             </div>
             <p class="text-gray-500 text-sm">
-                © 2025 Deepak Paryani. Crafted with <i class="fas fa-heart text-red-500"></i> and copious amounts of coffee.
+                &copy; 2026 Deepak Paryani. Crafted with <i class="fas fa-heart text-red-500"></i> and copious amounts of coffee.
             </p>
         </div>
     </footer>
 
     <!-- Back to Top -->
-    <button id="back-to-top" class="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full text-white text-xl shadow-2xl hover:scale-110 transition transform hover:rotate-90 hidden z-50">
+    <button id="back-to-top" type="button" aria-label="Back to top" class="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full text-white text-xl shadow-2xl hover:scale-110 transition transform hover:rotate-90 hidden z-50">
         <i class="fas fa-arrow-up"></i>
     </button>
 
