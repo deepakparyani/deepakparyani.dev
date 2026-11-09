@@ -79,8 +79,8 @@
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind (built locally - run `npm run build:css` after changing classes) -->
+    <link rel="stylesheet" href="css/tailwind.css">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -135,6 +135,7 @@
                     <a href="#skills" class="mobile-nav-link text-gray-300 hover:text-white transition">Skills</a>
                     <a href="#projects" class="mobile-nav-link text-gray-300 hover:text-white transition">Projects</a>
                     <a href="#contact" class="mobile-nav-link text-gray-300 hover:text-white transition">Connect</a>
+                    <a href="resume.html" class="mobile-nav-link text-cyan-400 hover:text-cyan-300 transition">Résumé</a>
                 </div>
             </div>
         </div>
@@ -160,6 +161,9 @@
                         <a href="#projects" class="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full font-semibold hover:scale-105 transition transform shadow-lg hover:shadow-cyan-500/25">
                             View My Work <i class="fas fa-arrow-right ml-2"></i>
                         </a>
+                        <a href="resume.html" class="px-8 py-4 glass-card rounded-full hover:scale-105 transition transform text-white">
+                            <i class="fas fa-file-alt mr-2"></i> Résumé
+                        </a>
                         <a href="https://github.com/deepakparyani" target="_blank" rel="noopener" class="px-8 py-4 glass-card rounded-full hover:scale-105 transition transform text-white">
                             <i class="fab fa-github mr-2"></i> GitHub
                         </a>
@@ -175,6 +179,35 @@
                              src="assets/images/profile.jpg" 
                              alt="Deepak Paryani"
                              class="relative w-80 h-80 rounded-full object-cover border-4 border-white/10 shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Now Section -->
+    <section id="now" class="pb-10 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="glass-card px-6 py-5 rounded-2xl neon-border fade-in">
+                <div class="flex flex-col lg:flex-row lg:items-center gap-5">
+                    <div class="flex items-center gap-3 shrink-0">
+                        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                        <span class="text-sm uppercase tracking-widest text-green-400 font-semibold">Now</span>
+                        <span class="text-xs text-gray-500">Nov 2026</span>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-4 text-sm text-gray-300 lg:border-l lg:border-white/10 lg:pl-6">
+                        <p>
+                            <span class="text-cyan-400 font-semibold">Tech Lead @ Finarkein</span> &mdash;
+                            agentic flows that automate hours of engineering work every day.
+                        </p>
+                        <p>
+                            <span class="text-green-400 font-semibold">Founder @ CereLume</span> &mdash;
+                            building Vendonow for local businesses.
+                        </p>
+                        <p>
+                            <span class="text-purple-400 font-semibold">Deep in</span> &mdash;
+                            agentic orchestration for document and message intelligence.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -961,6 +994,11 @@
             <p class="text-gray-500 text-sm">
                 &copy; 2026 Deepak Paryani. Crafted with <i class="fas fa-heart text-red-500"></i> and copious amounts of coffee.
             </p>
+            <p class="text-sm mt-3">
+                <a href="resume.html" class="text-gray-400 hover:text-cyan-400 transition">
+                    <i class="fas fa-file-alt mr-2"></i>Résumé
+                </a>
+            </p>
         </div>
     </footer>
 
@@ -970,5 +1008,24 @@
     </button>
 
     <script src="js/main.js"></script>
+
+    <!-- Analytics (optional, cookieless): create a free account at goatcounter.com
+         and put your site code below, e.g. 'deepakparyani'. Empty = disabled. -->
+    <script>
+        window.GOATCOUNTER_CODE = '';
+
+        (function () {
+            if (!window.GOATCOUNTER_CODE) return;
+
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://' + window.GOATCOUNTER_CODE + '.goatcounter.com/count.js';
+            script.setAttribute(
+                'data-goatcounter',
+                'https://' + window.GOATCOUNTER_CODE + '.goatcounter.com/count'
+            );
+            document.body.appendChild(script);
+        })();
+    </script>
 </body>
 </html>

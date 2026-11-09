@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Deepak Paryani</title>
+    <meta name="description" content="Resume of Deepak Paryani - Tech Lead at Finarkein Analytics, founder of CereLume Technologies. 14+ years across Python, Java enterprise systems and agentic AI.">
+    <link rel="canonical" href="https://deepakparyani.dev/resume.html">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0A0A'/%3E%3Ctext x='32' y='44' font-family='Arial,Helvetica,sans-serif' font-size='28' font-weight='bold' text-anchor='middle' fill='%2300F5FF'%3EDP%3C/text%3E%3C/svg%3E">
+    <style>
+        :root {
+            --ink: #111827;
+            --muted: #4b5563;
+            --rule: #d1d5db;
+            --accent: #0e7490;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: #f3f4f6;
+            color: var(--ink);
+            line-height: 1.55;
+            padding: 2rem 1rem 4rem;
+        }
+
+        .page {
+            max-width: 860px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 2.75rem 2.5rem 3rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        header {
+            border-bottom: 2px solid var(--ink);
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            letter-spacing: -0.02em;
+        }
+
+        .role {
+            color: var(--accent);
+            font-weight: 600;
+            margin-top: 0.15rem;
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem 1rem;
+            margin-top: 0.75rem;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .contact a {
+            color: var(--muted);
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            color: var(--accent);
+        }
+
+        h2 {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent);
+            margin: 1.6rem 0 0.6rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        .job {
+            margin-bottom: 1.1rem;
+            break-inside: avoid;
+        }
+
+        .job-head {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.25rem 0.75rem;
+        }
+
+        .job-head .dates {
+            font-size: 0.8rem;
+            color: var(--muted);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .company {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .company a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 0.4rem;
+        }
+
+        li {
+            position: relative;
+            padding-left: 1.1rem;
+            font-size: 0.9rem;
+            color: #1f2937;
+            margin-bottom: 0.25rem;
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            left: 0.15rem;
+            top: 0.55rem;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .summary {
+            font-size: 0.92rem;
+            color: #1f2937;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 0.6rem 1.5rem;
+        }
+
+        .skills .skill-group {
+            font-size: 0.85rem;
+        }
+
+        .skills .skill-group strong {
+            display: block;
+            margin-bottom: 0.1rem;
+        }
+
+        .skill-group span {
+            color: var(--muted);
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            align-items: center;
+        }
+
+        .actions button,
+        .actions a {
+            font: inherit;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 0.6rem 1.2rem;
+            border-radius: 999px;
+            border: 1px solid var(--ink);
+            background: var(--ink);
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .actions a {
+            background: #fff;
+            color: var(--ink);
+        }
+
+        .actions button:hover {
+            background: #374151;
+        }
+
+        .actions a:hover {
+            background: #f3f4f6;
+        }
+
+        .note {
+            font-size: 0.75rem;
+            color: var(--muted);
+        }
+
+        @media print {
+            @page {
+                margin: 14mm;
+            }
+
+            body {
+                background: #fff;
+                padding: 0;
+                font-size: 11pt;
+            }
+
+            .page {
+                box-shadow: none;
+                border-radius: 0;
+                padding: 0;
+                max-width: none;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            a {
+                color: var(--ink);
+            }
+
+            h2 {
+                margin-top: 1.1rem;
+            }
+
+            .job {
+                margin-bottom: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+        <div class="actions no-print">
+            <button type="button" onclick="window.print()">Print / Save as PDF</button>
+            <a href="index.html">&larr; Back to site</a>
+            <span class="note">Printing produces a clean, single-document PDF.</span>
+        </div>
+
+        <header>
+            <h1>Deepak Paryani</h1>
+            <p class="role">Tech Lead &amp; Founder</p>
+            <div class="contact">
+                <span>Pune, India</span>
+                <a href="mailto:dev@deepakparyani.dev">dev@deepakparyani.dev</a>
+                <a href="https://deepakparyani.dev">deepakparyani.dev</a>
+                <a href="https://github.com/deepakparyani">github.com/deepakparyani</a>
+                <a href="https://linkedin.com/in/deepakparyani">linkedin.com/in/deepakparyani</a>
+            </div>
+        </header>
+
+        <h2>Summary</h2>
+        <p class="summary">
+            Software engineer with 14+ years of experience across the Python ecosystem, Java enterprise systems and
+            agentic AI. Currently Tech Lead at Finarkein Analytics, building agentic flows that remove hours of manual
+            work from engineering and ops teams every day. Founder of CereLume Technologies, the company behind
+            Vendonow, a local business management SaaS. Previously led backend and GenAI initiatives at Enlyft Inc.,
+            boosting API performance by ~200%. Patent holder in facial-recognition-based device control.
+        </p>
+
+        <h2>Experience</h2>
+
+        <div class="job">
+            <div class="job-head">
+                <h3>Tech Lead</h3>
+                <span class="dates">Jan 2026 &ndash; Present</span>
+            </div>
+            <p class="company"><a href="https://finarkein.com">Finarkein Analytics</a></p>
+            <ul>
+                <li>Created agentic flows that automate workflows worth hours of a developer's time every day.</li>
+                <li>Handling multiple teams across Account Aggregator and the domains around it.</li>
+                <li>OpenLink &mdash; a hub connecting sellers and buyers of financial products (insurance, loans and other Fin Products).</li>
+                <li>Intelligent Document Parsing &mdash; structured data out of unstructured financial documents.</li>
+                <li>SMS Intelligence &mdash; turning raw message streams into usable financial signals.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-head">
+                <h3>Founder</h3>
+                <span class="dates">Dec 2025 &ndash; Present</span>
+            </div>
+            <p class="company">CereLume Technologies &mdash; <a href="https://vendonow.com">vendonow.com</a></p>
+            <ul>
+                <li>Founded CereLume Technologies and created Vendonow, a local business management software SaaS.</li>
+                <li>Own the product end to end &mdash; architecture, delivery and first customers.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-head">
+                <h3>Senior Software Engineer</h3>
+                <span class="dates">2023 &ndash; 2026</span>
+            </div>
+            <p class="company">Enlyft Inc.</p>
+            <ul>
+                <li>Led GenAI orchestration and API performance initiatives; built an MCP layer extracting B2B sales intelligence.</li>
+                <li>Scaled public APIs by ~200% (from seconds to under 500ms) with caching, query optimization and load testing.</li>
+                <li>Collaborated with Microsoft to provide sales insights for their SalesQualificationAgent via MCP server, API bridge and Copilot Agents.</li>
+                <li>Expertise in CRM APIs, high-volume data syncs and concurrency solutions.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-head">
+                <h3>Principal Software Engineer</h3>
+                <span class="dates">2013 &ndash; 2023</span>
+            </div>
+            <p class="company">eQ Technologic Inc.</p>
+            <ul>
+                <li>Full-stack development across the Java enterprise ecosystem &mdash; Spring, authentication, REST and compliance.</li>
+                <li>Led complete module delivery from requirements to production, including integrations with Siemens products.</li>
+                <li>Led teams with code reviews, performance optimizations and cross-team coordination.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-head">
+                <h3>Startup Engineer</h3>
+                <span class="dates">2012 &ndash; 2013</span>
+            </div>
+            <p class="company">HuntsHire</p>
+            <ul>
+                <li>Built gamified tools to modernize IT talent hiring, including interactive coding challenges and skill assessments.</li>
+            </ul>
+        </div>
+
+        <h2>Selected Projects</h2>
+        <ul>
+            <li><strong>OpenLink</strong> &mdash; marketplace connecting sellers and buyers of financial products (Finarkein Analytics).</li>
+            <li><strong>Agentic Workflow Automation</strong> &mdash; agentic flows replacing hours of manual engineering work daily.</li>
+            <li><strong>Document &amp; SMS Intelligence</strong> &mdash; Intelligent Document Parsing and SMS classification into structured data.</li>
+            <li><strong>GenAI Orchestration Platform</strong> &mdash; custom knowledge via APIs into agentic flows using MS Copilot and direct LLM integrations.</li>
+            <li><strong>API Performance Revolution</strong> &mdash; public APIs from seconds to sub-500ms, cutting infrastructure cost.</li>
+            <li><strong>Microsoft SalesQualificationAgent</strong> &mdash; MCP server, API bridge and Copilot agents enabling AI-powered sales insights.</li>
+        </ul>
+
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill-group">
+                <strong>Languages &amp; Frameworks</strong>
+                <span>Python, Java, Spring, FastAPI, Flask, AsyncIO, React, Node.js</span>
+            </div>
+            <div class="skill-group">
+                <strong>GenAI &amp; Agents</strong>
+                <span>OpenAI, LangGraph, MCP, Agentic Flows, Tool Calling, Workflow Automation</span>
+            </div>
+            <div class="skill-group">
+                <strong>Data &amp; Infrastructure</strong>
+                <span>PostgreSQL, Redis, InfluxDB, Airflow, Celery, Docker, Azure, DataDog</span>
+            </div>
+            <div class="skill-group">
+                <strong>Domain</strong>
+                <span>Account Aggregator, lending and insurance journeys, CRM integrations (Salesforce, HubSpot, Dynamics, Pipedrive)</span>
+            </div>
+            <div class="skill-group">
+                <strong>Engineering</strong>
+                <span>System design, microservices, API design, performance tuning, caching, load testing, observability</span>
+            </div>
+        </div>
+
+        <h2>Patent</h2>
+        <div class="job">
+            <div class="job-head">
+                <h3>System for controlling handheld computing devices with facial expressions and gestures</h3>
+                <span class="dates">Application No. 690/MUM/2013</span>
+            </div>
+            <ul>
+                <li>Pioneering system using computer vision and machine learning to make device control more accessible.</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

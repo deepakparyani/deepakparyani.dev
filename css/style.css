@@ -257,6 +257,13 @@ body {
     transform: rotate(180deg);
 }
 
+/* Mobile navigation links */
+.mobile-nav-link {
+    display: block;
+    padding: 0.35rem 0;
+    font-size: 1rem;
+}
+
 /* Skip link */
 .skip-link {
     position: absolute;
